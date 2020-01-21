@@ -4,7 +4,7 @@ class LinkedList:
         self.head = None
         self.length = 0
 
-    def add_node(self, node_data, required_position=None):
+    def add(self, node_data, required_position=None):
         if required_position == None:
             if self.head is None:
                 new_node = Node(node_data)
@@ -39,7 +39,7 @@ class LinkedList:
                     else:
                         current_node = current_node.next_node
 
-    def dump_ll(self):
+    def dump(self):
         print("")
         print(" Linked List : " + self.ll_name)
         print("")
@@ -60,11 +60,11 @@ class Node:
         self.next_node = next_node
 
 
-ll_inst = LinkedList(input(" Enter the List Name : "))
-ll_inst.add_node(1)
-ll_inst.add_node(2)
-ll_inst.add_node(3)
-ll_inst.add_node(4)
-ll_inst.add_node(5)
-ll_inst.dump_ll()
+ll = LinkedList(input(" Enter the List Name : "))
+ll.add(1)
+ll.add(2)
+ll.add(3)
+ll.add(4)
+ll.add(5)
+ll.dump()
 print("")
